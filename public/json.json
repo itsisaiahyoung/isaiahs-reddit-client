@@ -1,0 +1,17 @@
+{
+    "title": "Sample Post Title",
+    "content": "This is some sample content for testing purposes.",
+    "author": {
+      "name": "John Doe",
+      "username": "johndoe123"
+    },
+    "comments": [
+      {
+        "content": "This is a sample comment.",
+        "author": {
+          "name": "Jane Smith",
+          "username": "janesmith789"
+        }
+      }
+    ]
+  }

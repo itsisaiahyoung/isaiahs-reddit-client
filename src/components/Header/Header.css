@@ -1,0 +1,24 @@
+.App-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #282c34;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.App-header  h1{
+    display: flex;
+    min-height: 10vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-right: 10px;
+}
+
+.App-header  h3 {
+    color: aqua;
+}
