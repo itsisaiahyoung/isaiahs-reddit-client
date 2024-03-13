@@ -1,24 +1,36 @@
 .App-header {
     display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #282c34; /* Change to your preferred color */
+    padding: 20px;
+  }
+  
+  .Header-Text {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    flex-direction: row;
-    background-color: #282c34;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.App-header  h1{
-    display: flex;
-    min-height: 10vh;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    font-size: calc(10px + 2vmin);
+  }
+  
+  .SearchButton {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #00e5ff;
     color: white;
-    margin-right: 10px;
-}
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.App-header  h3 {
-    color: aqua;
-}
+  .SearchButton:hover {
+    background-color: #00b3cc;
+    cursor: pointer;
+  }
+
+  .Header-Text:hover {
+    cursor: pointer;
+  }

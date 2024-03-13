@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './Main.css';
 import { selectAllPosts, fetchPosts } from './MainSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const Main = () => {
                     <div className="Post-Content">
                     </div>
 
-                    <button className="ReadMore">Read More</button>
+                    <Link to={`/post/${post.id}`}>Read More</Link>
                 </div>
             )
         })}
