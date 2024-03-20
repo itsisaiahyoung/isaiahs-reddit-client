@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-export const fetchPosts = createAsyncThunk('main/fetchPosts', async () => { 
+export const fetchPosts = createAsyncThunk('main/fetchPosts', async (searchTerm) => { 
     try {
-        const response = await fetch('https://www.reddit.com/r/popular.json');
+        const response = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
         const json = await response.json();
         return json.data.children.map(child => child.data);
     } catch (error) {
         console.error('Failed to fetch posts: ', error);
-        throw error; // Rethrow the error to indicate the failure
+        throw error;
     }
 });
 

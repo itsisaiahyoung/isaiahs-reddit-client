@@ -18,17 +18,19 @@ const Search = () => {
     }
     return (
         <div className="Search">
-            <h1>Search Posts</h1>
-            <div className="Search-Input">
-            <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
-            <button onClick={handleSearch}>Search</button>
+            <div className="Search-Header">
+                <h1>Search Posts</h1>
+                <div className="Search-Input">
+                <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
+                <button onClick={handleSearch}>Search</button>
+                </div>
             </div>
             <div className="Search-Results">
                 {searchResults.map(post => (
                     <div key={post.id} className="post">
                         <h3>{post.title}</h3>
                         <p>{post.author}</p>
-                        <Link to={`/post/${post.id}`}>Read More</Link>
+                        <Link className="ReadMore-Button" to={`/post/${post.id}`}>Read More</Link>
                     </div>
                 ))}
             </div>

@@ -1,9 +1,17 @@
+.MainPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .Main {
+    flex: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
 .post {
@@ -17,16 +25,24 @@
     margin-bottom: 20px;
 }
 
-.ReadMore {
-    background-color: #282c34;
-    color: white;
+.ReadMore-Button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #282c34;
+    border-radius: 5px;
+    text-decoration: none;
     padding: 10px;
-    border: none;
     cursor: pointer;
     margin-top: 10px;
     animation: fadeIn 1s;
 }
 
-.ReadMore:hover {
-    background-color: #3d3d3d;
+.ReadMore-Button:hover {
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+.ReadMore-Button:active {
+    background-color: #ffffff;
+    color: #000000;
 }
