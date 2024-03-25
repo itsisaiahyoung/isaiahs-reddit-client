@@ -17,23 +17,28 @@ const searchSlice = createSlice({
     initialState: {
         searchResults: [],
         isLoadingSearchResults: false,
-        failedToLoadSearchResults: false
+        failedToLoadSearchResults: false,
+        status: 'idle'
     },
     extraReducers: (builder) => {
         builder
             .addCase(searchPosts.pending, (state) => {
                 state.isLoadingSearchResults = true;
                 state.failedToLoadSearchResults = false;
+                state.status = 'loading';
             }).addCase(searchPosts.rejected, (state) => {
                 state.isLoadingSearchResults = false;
                 state.failedToLoadSearchResults = true;
+                state.status = 'failed';
             }).addCase(searchPosts.fulfilled, (state, action) => {
                 state.isLoadingSearchResults = false;
                 state.failedToLoadSearchResults = false;
+                state.status = 'succeeded';
                 state.searchResults = action.payload;
             })
     }
 });
 
 export const selectSearchResults = (state) => state.search.searchResults;
+export const selectSearchStatus = (state) => state.search.status;
 export default searchSlice.reducer;

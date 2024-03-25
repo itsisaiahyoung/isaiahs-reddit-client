@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #f5f5f5;
+    margin-left: 20px;
     padding-top: 20px;
     width: 20%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -21,11 +22,10 @@
 
 }
 
-.Sidebar button {
+.Subreddit{
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    border: 2px solid #282c34;
-    border-radius: 5px;
+    border: none;
     width: 100%;
     text-decoration: none;
     padding: 10px;
@@ -34,7 +34,12 @@
     animation: fadeIn 1s;
 }
 
-.Sidebar button:hover {
-    background-color: #282c34;
-    color: #ffffff;
+.Subreddit:hover {
+    color: #0099ff;
 }
+
+.Subreddit:active, .Subreddit.selected {
+    border-left: 3px solid #333;
+    background-color: #f0f0f0;
+    padding-left: 7px; /* reduce padding to account for border */
+} 
