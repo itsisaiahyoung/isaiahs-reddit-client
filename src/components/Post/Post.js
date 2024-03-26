@@ -23,9 +23,11 @@ const Post = () => {
                     <p>{post.author}   •   {post.subreddit}</p>
                 </div>
                 <div className="post-main">
-                    {
-                        post.thumbnail ? <img src={post.thumbnail} width="300px" alt="thumbnail" /> : <p>no image</p>
-                    }           
+                {
+                    post.preview 
+                    ? <div dangerouslySetInnerHTML={{ __html: `<img src="${post.preview.images[0].source.url}" width="80%" alt="" />` }} /> 
+                    : <p></p>
+                }        
                     <div className="post-content">
                         <p>{post.selftext}</p>
                     </div>

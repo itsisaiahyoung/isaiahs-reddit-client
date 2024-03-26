@@ -39,6 +39,11 @@ const Main = () => {
                 <div className="post" key={post.id}>
                     <h3>{title}</h3>
                     <p>{author}</p>
+                    {
+                    post.preview 
+                    ? <div dangerouslySetInnerHTML={{ __html: `<img src="${post.preview.images[0].source.url}" width="80%" alt="" />` }} /> 
+                    : <p></p>
+                    } 
                     <Link className="ReadMore-Button" to={`/post/${post.id}`}>Read More</Link>
                 </div>
             );

@@ -38,6 +38,11 @@ const Search = () => {
             <div key={post.id} className="post">
                 <h3>{post.title}</h3>
                 <p>{post.author}</p>
+                {
+                    post.preview 
+                    ? <div dangerouslySetInnerHTML={{ __html: `<img src="${post.preview.images[0].source.url}" width="300px" alt="" />` }} /> 
+                    : <p></p>
+                } 
                 <Link className="ReadMore-Button" to={`/post/${post.id}`}>Read More</Link>
             </div>
         ));

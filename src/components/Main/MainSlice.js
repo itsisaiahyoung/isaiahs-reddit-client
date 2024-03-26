@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchPosts = createAsyncThunk('main/fetchPosts', async (searchTerm) => { 
     try {
-        const response = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
+        const response = await fetch(`https://www.reddit.com/r/${searchTerm}.json?raw_json=1`);
         await new Promise(resolve => setTimeout(resolve, 2000));
         const json = await response.json();
         return json.data.children.map(child => child.data);

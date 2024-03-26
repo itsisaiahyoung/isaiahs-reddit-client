@@ -26,3 +26,12 @@
     flex-direction: column;
     margin-bottom: 10px;
 }
+
+.post-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
